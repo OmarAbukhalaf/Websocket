@@ -6,7 +6,6 @@ public class Main {
             URI link = new URI("wss://eu-adx.live.tickerchart.net/streamhubws/");
             ClientWebSock client = new ClientWebSock(link);
             client.connect();
-            while(true){}
         }catch (Exception e){
             e.printStackTrace();
         }
