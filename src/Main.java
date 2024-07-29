@@ -1,14 +1,13 @@
 import java.net.URI;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         try {
-            URI link = new URI("wss://eu-adx.live.tickerchart.net/streamhubws/");
-            ClientWebSock client = new ClientWebSock(link);
+            ClientWebSock client = new ClientWebSock(new URI("wss://eu-adx.live.tickerchart.net/streamhubws/"));
             client.connect();
-        }catch (Exception e){
-            e.printStackTrace();
+        } catch(Exception e){
+            System.out.println("Error: " + e);
         }
-    }
 
+    }
 }
